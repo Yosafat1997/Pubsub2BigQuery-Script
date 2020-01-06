@@ -10,9 +10,9 @@ def pubsub2json(data):
     streamer = data
     raw = json.loads(streamer)
     data = raw
-    tracks.append(data)
-    print(tracks)
-    write_to_bq(tracks)
+    rows.append(data)
+    print(rows)
+    write_to_bq(rows)
 
 
 def write_to_bq(msg):
