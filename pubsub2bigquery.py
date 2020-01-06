@@ -17,7 +17,6 @@ def pubsub2json(data):
 
 def write_to_bq(msg):
     client = bigquery.Client().from_service_account_json(r'<YOUR CREDENTIAL FILE>')
-    print(client.get_service_account_email())
     dataset_ref = client.dataset('<YOUR DATASET>')
     table_ref = dataset_ref.table('<YOUR TABLE>')
     table = client.get_table(table_ref)
@@ -31,7 +30,7 @@ def write_to_bq(msg):
             print(error)
 
 
-def test():
+def PubSub2BQ():
     subscriber = pubsub_v1.SubscriberClient()
     subscription_path = subscriber.subscription_path(
         '<YOUR GCP PROJECT>', '<PUBSUB SUBSCRIPTION>'
@@ -56,9 +55,9 @@ def test():
 
 
 def main():
-    test()
+    PubSub2BQ()
 
 
 if __name__ == '__main__':
-    main()
+    PubSub2BQ()
 
