@@ -10,11 +10,11 @@ is to rescue all the unack-ed data from pubsub current subscription.
 ### How it work
 I have read a interesting article in here: https://medium.com/faun/writing-a-pub-sub-stream-to-bigquery-401b44c86bf about streaming data from
 Pubsub subscriber to BigQuery. I modified some of the code. In this case, I dont use any transformation in the decoded JSON, and raw-added
-the json into BigQuery.
+the json into BigQuery. 
 
 ### TODO
-I still don't know how to run it in cloud. Any help is appreciated. Also, i have some idea to validate the message, in case some null or improper
-message can cause trouble to the operation (ex: null date)
+I still don't know how to run it in cloud. Any help is appreciated. Also, i have some idea to validate the message, in case some null or improper message can cause trouble to the operation (ex: null date). Notice that, you must make sure that your JSON data has same key-value 
+format as the target table (otherwise it will fail)
 
 ### Notes:
 * Make sure you have valid and active GCP Project
@@ -24,4 +24,4 @@ message can cause trouble to the operation (ex: null date)
 * Make sure you have active BigQuery Dataset and Table and also active pubsub subscribers
 * Pricing is depend on your project. You have your responsibility on pricing.
 * This method using Asynchronous insertion, so you will have experienced any data with time information will added randomly and not sequenced.
-* This project is free >A<
+* This project is free
