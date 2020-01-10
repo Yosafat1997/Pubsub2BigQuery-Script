@@ -18,7 +18,7 @@ format as the target table (otherwise it will fail)
 
 ### Notes:
 * Make sure you have valid and active GCP Project
-* I recomend you to use newest Python version (up to 3.0, due 2.7 is discontinued)
+* I recomend you to use latest Python version (up to 3.0, due 2.7 is discontinued)
 * Make sure you have Google GCP SDK (for windows) and API (for the other)
 * Make sure you have Google Cloud Library for Python; pubsub and bigquery 
 * Make sure you have active BigQuery Dataset and Table and also active pubsub subscribers
